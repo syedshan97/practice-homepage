@@ -3,3 +3,4 @@
 ## Key Features
 
 - Responsive Header
+- Responsive Footer
