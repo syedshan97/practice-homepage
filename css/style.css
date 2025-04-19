@@ -506,3 +506,236 @@ body {
         height: 200px;
     }
 }
+
+/* ===== Global Section Styles ===== */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+}
+
+.highlight-blue {
+    background: linear-gradient(120deg, 
+        var(--primary-blue), 
+        #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== About Styles ===== */
+.about {
+    padding: 10rem 0;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Image Section */
+.about-image {
+    position: relative;
+    z-index: 1;
+}
+
+.image-floating {
+    position: relative;
+    animation: float 8s ease-in-out infinite;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.graphic-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.geometric-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(41, 98, 255, 0.05);
+    border-radius: 50%;
+    top: -30px;
+    left: -30px;
+    filter: blur(20px);
+}
+
+.geometric-triangle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, 
+        rgba(41, 98, 255, 0.08), 
+        rgba(0, 188, 212, 0.08));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    bottom: -40px;
+    right: -30px;
+    filter: blur(15px);
+}
+
+.particle-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--primary-blue) 1px, transparent 1px);
+    background-size: 15px 15px;
+    opacity: 0.1;
+}
+
+/* Content Section */
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.about-list {
+    list-style: none;
+    margin: 2.5rem 0;
+}
+
+.about-list li {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 1.2rem 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-list li:hover {
+    transform: translateX(15px);
+}
+
+.about-list i {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    min-width: 40px;
+    margin-top: 0.3rem;
+}
+
+.about-list h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-list p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* CTA Buttons */
+.about-cta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.primary-btn {
+    background: var(--primary-blue);
+    color: white !important;
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.phone-btn {
+    background: rgba(41, 98, 255, 00);
+    color: var(--primary-blue) !important;
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-blue);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(41, 98, 255, 0.2);
+}
+
+.phone-btn:hover {
+    background: rgba(41, 98, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .about-image {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    .about-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-cta {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .about {
+        padding: 6rem 0;
+    }
+    
+    .about-cta {
+        flex-direction: column;
+    }
+}
