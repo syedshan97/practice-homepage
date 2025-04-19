@@ -4,4 +4,6 @@
 
 - Responsive Header
 - Responsive Hero Section
+- Responsive About Us Section
+- Responsive Services Section
 - Responsive Footer
