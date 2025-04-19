@@ -26,3 +26,27 @@ document.addEventListener('click', (e) => {
 document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', toggleMobileMenu);
 });
+
+
+// Video Modal Functionality
+const videoCTA = document.querySelector('.cta-video');
+const videoModal = document.getElementById('videoModal');
+const closeModal = document.querySelector('.close-modal');
+
+// Open Modal
+videoCTA.addEventListener('click', (e) => {
+    e.preventDefault();
+    videoModal.classList.add('active');
+});
+
+// Close Modal
+closeModal.addEventListener('click', () => {
+    videoModal.classList.remove('active');
+});
+
+// Close when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+        videoModal.classList.remove('active');
+    }
+});
