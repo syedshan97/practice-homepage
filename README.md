@@ -6,4 +6,5 @@
 - Responsive Hero Section
 - Responsive About Us Section
 - Responsive Services Section
+- Responsive Why Choose Us Section
 - Responsive Footer
