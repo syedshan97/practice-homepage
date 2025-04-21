@@ -1016,3 +1016,121 @@ body {
         padding: 1.5rem;
     }
 }
+
+/* ===== Testimonials Styles ===== */
+.testimonials {
+    padding: 8rem 0;
+    background: 
+        linear-gradient(120deg, 
+            rgba(41,98,255,0.15) 0%, 
+            rgba(0,188,212,0.1) 100%),
+        url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M0 100 Q 50 150 100 100 T 200 100 L200 0 L0 0" fill="%232962ff" opacity="0.05"/></svg>');
+    background-size: cover;
+}
+
+.testimonial-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    min-width: calc(33.33% - 1.33rem);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.client-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: block;
+    object-fit: cover;
+    border: 2px solid var(--primary-blue);
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quote {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.client-name {
+    color: #2d3436;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.client-role {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.carousel-arrow {
+    position: static;
+    transform: none;
+    background: var(--primary-blue);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background: white;
+    border-color: var(--primary-blue);
+    color: #2962ff  !important;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-card {
+        min-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        min-width: 100%;
+    }
+    
+    .carousel-arrow {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+

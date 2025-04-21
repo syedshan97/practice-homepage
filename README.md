@@ -7,4 +7,5 @@
 - Responsive About Us Section
 - Responsive Services Section
 - Responsive Why Choose Us Section
+- Responsive Testimonial Slider
 - Responsive Footer

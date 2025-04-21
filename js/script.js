@@ -87,3 +87,55 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(document.querySelector('.stats-grid'));
+
+// Testimonial Carousel Logic
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.testimonial-card');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let currentIndex = 0;
+let autoSlideInterval;
+
+function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth + 32; // Include gap
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    updateCarousel();
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Event Listeners
+prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoSlide();
+});
+
+nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoSlide();
+});
+
+// Pause on hover
+testimonialCarousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+testimonialCarousel.addEventListener('mouseleave', startAutoSlide);
+
+// Initialize
+startAutoSlide();
+window.addEventListener('resize', updateCarousel);
