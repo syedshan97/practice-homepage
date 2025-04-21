@@ -11,4 +11,5 @@
 - Responsive Team Section
 - Responsive CTA Section
 - Responsive Case Studies Section
+- Responsive Contact Section
 - Responsive Footer
