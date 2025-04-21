@@ -139,3 +139,4 @@ testimonialCarousel.addEventListener('mouseleave', startAutoSlide);
 // Initialize
 startAutoSlide();
 window.addEventListener('resize', updateCarousel);
+

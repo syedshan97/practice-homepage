@@ -10,4 +10,5 @@
 - Responsive Testimonial Slider
 - Responsive Team Section
 - Responsive CTA Section
+- Responsive Case Studies Section
 - Responsive Footer
