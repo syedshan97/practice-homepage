@@ -9,4 +9,5 @@
 - Responsive Why Choose Us Section
 - Responsive Testimonial Slider
 - Responsive Team Section
+- Responsive CTA Section
 - Responsive Footer
